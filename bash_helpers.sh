@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# some more ls aliases
-
 #####################################
 ## aliases
 #####################################
@@ -19,15 +17,17 @@ alias lr='ls -tr'
 alias du1='du -h --max-depth 1'
 alias du2='du -h --max-depth 2'
 
-alias rm~='rm -i ./*~'
-alias cdl='cd $( lt |awk "END{print \$NF}" )'
-
+## grep aliases
 alias grepr='grep -R * -e '
-
-alias python="python3"
 
 ## ssh aliases
 alias sshpi="ssh -l pi 192.168.1.202"
+
+## misc
+alias rm~='rm -i ./*~'
+alias cdl='cd $( lt |awk "END{print \$NF}" )'
+
+alias python="python3"
 
 # command prompt format
 PS1='[\[\e[1;31m\]@ \[\e[1;34\]m\w\[\e[m\]]\n>> '
@@ -163,16 +163,13 @@ export EDITOR=emacs
 # set path
 export PATH=/home/`whoami`/bin:/home/`whoami`/.local/bin:$PATH
 
-# find example for selecting particular file types and eliminate directories
-# find . -regex '.*\.\(cpp\|h\)' -print -o -name . -o -prune |xargs grep 'run' -n --color=auto
-
-#####################################
-# temporary aliases
-
 
 #####################################
 ## Notes:
 #####################################
+
+# find example for selecting particular file types and eliminate directories
+# find . -regex '.*\.\(cpp\|h\)' -print -o -name . -o -prune |xargs grep 'run' -n --color=auto
 
 ## for WSL in windows:
 ## to GUI applications in ubuntu
